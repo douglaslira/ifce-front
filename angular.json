@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -107,5 +110,8 @@
       }
     }
   },
-  "defaultProject": "ifce-project"
+  "defaultProject": "ifce-project",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

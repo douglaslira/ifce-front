@@ -1,0 +1,12 @@
+<form [formGroup]="userForm" (ngSubmit)="addCustomer()" novalidate novalidate>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" formControlName="name">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="submit" [disabled]="!userForm.valid">{{labelButton}}</button>
+    </div>
+  </div>
+  <div *ngIf="( getControl.name.touched || getControl.name.dirty) && getControl.name.invalid" class="text-danger">
+    <div *ngIf="getControl.name.errors.required">Name is required.</div>
+    <div *ngIf="getControl.name.errors?.minlength">Minimum 4 character are required.</div>
+  </div>
+</form>
